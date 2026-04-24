@@ -90,7 +90,7 @@ async function translateRow(row, targetLang) {
 }
 
 // Endpoint POST /translate
-app.post('/translate', async (req, res) => {
+app.post('*', async (req, res) => {
   try {
     if (!req.files || !req.files.file) {
       return res.status(400).send('No file uploaded. Please attach an Excel file.');
