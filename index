@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outil de traduction RETIF</title>
+</head>
+<body>
+  <h1>Outil de traduction RETIF</h1>
+  <p>Importez un fichier Excel avec les colonnes SKU, DESI, NAME, SHORT_DESCRIPTION et DESCRIPTION.</p>
+
+  <form action="/api/translate" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xlsx,.xls" required />
+    <button type="submit">Traduire le fichier</button>
+  </form>
+</body>
+</html>
