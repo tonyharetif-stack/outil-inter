@@ -1,58 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Outil de traduction RETIF</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            padding: 40px;
-        }
-
-        .box {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        h1 {
-            margin-top: 0;
-            color: #111;
-        }
-
-        input,
-        button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 15px;
-            font-size: 16px;
-        }
-
-        button {
-            background: #111;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 6px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Outil de traduction RETIF</title>
 </head>
-
 <body>
-    <div class="box">
-        <h1>Outil de traduction RETIF</h1>
-        <p>Importez un fichier Excel avec les colonnes SKU, DESI, NAME, SHORT_DESCRIPTION et DESCRIPTION.</p>
+  <h1>Outil de traduction RETIF</h1>
+  <p>Importez un fichier Excel avec les colonnes SKU, DESI, NAME, SHORT_DESCRIPTION et DESCRIPTION.</p>
 
-        <form action="/api/translate" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".xlsx,.xls" required />
-            <button type="submit">Traduire le fichier</button>
-        </form>
-    </div>
+  <form action="/api/translate" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xlsx,.xls" required />
+    <button type="submit">Traduire le fichier</button>
+  </form>
 </body>
-
 </html>
